@@ -1,0 +1,829 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Net Worth</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+        name='viewport' />
+    <link rel="stylesheet" href="https://www.club720.org/css/bootstrap.css">
+    <script src="https://www.club720.org/js/jquery.min.js" type="text/javascript"></script>
+
+    <style>
+    
+        .table .thead-dark th {
+            color: #fff;
+            background-color: #003256;
+            border: 2px solid white;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .form-group button {
+            margin-left: 1rem;
+            cursor: pointer;
+            padding: 0px 8px 2px 8px;
+            font-size: 22px;
+            margin-top: 1px;
+            margin-bottom: 0px;
+            align-content: center;
+            border-radius: 50%;
+            text-align: center;
+            height: 33px;
+            display: inline-flex;
+            justify-content: center;
+            /* center the content horizontally */
+            align-items: center;
+
+        }
+
+        #minus {
+            padding: 0px 12px 0px 12px;
+        }
+
+        .form-control {
+            width: 75%;
+        }
+
+        .table .tbody td .valueClass {
+            width: 55%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .widthFirstColumn {
+            width: 45%;
+            margin-bottom: 1rem;
+        }
+
+        .dollar {
+            font-weight: bold;
+            margin-right: 5px;
+            margin-top: 6px;
+            font-size: 17px;
+        }
+
+        .table th,
+        .table td {
+            padding: 0.35rem 0.75rem 0.3rem 0.75rem;
+            border-top: 1px solid #dee2e6;
+        }
+
+        caption {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            color: #212529;
+            text-align: left;
+            caption-side: top;
+        }
+
+        @media only screen and (max-width:300px){
+          
+        .table {
+            width: 100%;
+            color: black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        }
+
+        @media only screen and (min-width: 300px) and (max-width:500px) {
+           
+        .table {
+            width: 100%;
+            color: black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        }
+
+        @media (min-width: 500px) and (max-width:800px) {
+           
+        .table {
+            width: 90%;
+            color: black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        }
+
+        @media (min-width: 800px)  {
+           
+        .table {
+            width: 85%;
+            color: black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        }
+
+
+    </style>
+
+    <script>
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode != 46 && charCode > 31
+                && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- <div class="container-page"> -->
+
+    <!-- <h2 style="margin-bottom: 13px;"> My Assets</h2> -->
+    <table class="table">
+        <caption>
+            <h2 style="margin-bottom: 13px;"> My Assets</h2>
+        </caption>
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Value</th>
+            </tr>
+        </thead>
+        <tbody class="tbody">
+            <tr>
+                <td class="widthFirstColumn">Cash</td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span><input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="widthFirstColumn">Checking Accounts</td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="widthFirstColumn">Savings Accounts</td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span><input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="widthFirstColumn">Matched savings accounts</td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="widthFirstColumn">Savings bonds</td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="widthFirstColumn">Stocks or mutual funds</td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="widthFirstColumn">Certificates of deposit (CDs)</td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="widthFirstColumn">College savings plan</td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="widthFirstColumn">ABLE account</td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="widthFirstColumn">401(k)</td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="widthFirstColumn"> Individual Retirement Account (IRA)</td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="otherInvestments">
+                <td class="widthFirstColumn">Other investments :
+                    <input type="text" placeholder="Enter" class="form-control">
+                </td>
+                <td class="valueClass">
+                    <br>
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                        <button class="btn btn-primary btn-sm add" data-tr="otherInvestments"
+                            data-columnName="Other investments :" id="0"> + </button>
+                        <!-- <button class="btn btn-danger remove" id="minus"> - </button> -->
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="widthFirstColumn"> Life insurance policies (cash value, if any) </td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr class="Carsandtrucks">
+                <td class="widthFirstColumn">Cars and trucks (trade-in or resale value) :
+                    <input type="text" placeholder="Enter" class="form-control">
+                </td>
+                <td class="valueClass">
+                    <br>
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                        <button class="btn btn-primary btn-sm add" data-tr="Carsandtrucks"
+                            data-columnName="Cars and trucks (trade-in or resale value) :" id="0"> +
+                        </button>
+                        <!-- <button class="btn btn-danger remove" id="minus"> - </button> -->
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="Recreationalvehicles">
+                <td class="widthFirstColumn">Recreational vehicles (motor home, boat, etc.) :
+                    <input type="text" placeholder="Enter" class="form-control">
+                </td>
+                <td class="valueClass">
+                    <br>
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                        <button class="btn btn-primary btn-sm add" data-tr="Recreationalvehicles"
+                            data-columnName="Recreational vehicles (motor home, boat, etc.) :" id="0"> +
+                        </button>
+                        <!-- <button class="btn btn-danger remove" id="minus"> - </button> -->
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="widthFirstColumn"> Homes I own (current market value) </td>
+                <td class="valueClass">
+
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="widthFirstColumn"> Jewelry </td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="widthFirstColumn"> Antiques </td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="widthFirstColumn"> Electronics </td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="widthFirstColumn"> Furniture </td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="widthFirstColumn"> Appliances </td>
+                <td class="valueClass">
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="otherHouseholdItems">
+                <td class="widthFirstColumn">Other household items:<br>
+                    <input type="text" placeholder="Enter" class="form-control">
+                </td>
+                <td class="valueClass">
+                    <br>
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                        <button class="btn btn-primary btn-sm add" data-tr="otherHouseholdItems"
+                            data-columnName="Other household items" id="0"> + </button>
+                        <!-- <button class="btn btn-danger remove" id="minus"> - </button> -->
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="otherAssets">
+                <td class="widthFirstColumn">Other assets :
+                    <input type="text" placeholder="Enter" class="form-control">
+                </td>
+                <td class="valueClass">
+                    <br>
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control assets" id="asset1"
+                            aria-describedby="asset1" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                        <button class="btn btn-primary btn-sm add" data-tr="otherAssets" data-columnName="Other assets"
+                            id="0"> + </button>
+                        <!-- <button class="btn btn-danger remove" id="minus"> - </button> -->
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- <div class="container-table"> -->
+    
+    <table class="table">
+        <caption> <h2 style="margin-bottom: 13px;"> My Liabilities </h2> </caption>
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Value</th>
+            </tr>
+        </thead>
+        <tbody class="tbody2">
+
+            <tr class="CreditCardBalances">
+                <td class="widthFirstColumn">Credit card balances :
+                    <input type="text" placeholder="Enter" class="form-control">
+                </td>
+                <td class="valueClass">
+                    <br>
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control liabilities"
+                            aria-describedby="liabilities" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                        <button class="btn btn-primary btn-sm addliabilities" data-tr="CreditCardBalances"
+                            data-columnName="Credit card balances :" id="0"> + </button>
+                        <!-- <button class="btn btn-danger remove" id="minus"> - </button> -->
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="BalancesOwed">
+                <td class="widthFirstColumn">Balances owed on store purchases (layaway or other store
+                    credit) :
+                    <input type="text" placeholder="Enter" class="form-control">
+                </td>
+                <td class="valueClass">
+                    <br>
+                    
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control liabilities"
+                            aria-describedby="liabilities" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                        <button class="btn btn-primary btn-sm addliabilities" data-tr="BalancesOwed"
+                            data-columnName="Balances owed on store purchases (layaway or other store credit) :" id="0">
+                            + </button>
+                        <!-- <button class="btn btn-danger remove" id="minus"> - </button> -->
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="Billsdue">
+                <td class="widthFirstColumn">Bills due for services (medical, dental, electrical, gas,
+                    phone, and other services) :
+                    <input type="text" placeholder="Enter" class="form-control">
+                </td>
+                <td class="valueClass">
+                    <br>
+                    <br>
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control liabilities"
+                            aria-describedby="liabilities" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                        <button class="btn btn-primary btn-sm addliabilities" data-tr="Billsdue"
+                            data-columnName="Bills due for services (medical, dental, electrical, gas, phone, and other services) :"
+                            id="0"> + </button>
+                        <!-- <button class="btn btn-danger remove" id="minus"> - </button> -->
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="Mortgages">
+                <td class="widthFirstColumn">Mortgages (principal balance) :
+                    <input type="text" placeholder="Enter" class="form-control">
+                </td>
+                <td class="valueClass">
+                    <br>
+                    <div class="form-group">
+
+                        <span class="dollar">$</span> <input type="number" class="form-control liabilities"
+                            aria-describedby="liabilities" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                        <button class="btn btn-primary btn-sm addliabilities" data-tr="Mortgages"
+                            data-columnName="Mortgages (principal balance) : " id="0"> + </button>
+                        <!-- <button class="btn btn-danger remove" id="minus"> - </button> -->
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="VehicleLoans">
+                <td class="widthFirstColumn">Vehicle loans (principal balance) :
+                    <input type="text" placeholder="Enter" class="form-control">
+                </td>
+                <td class="valueClass">
+                    <br>
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control liabilities"
+                            aria-describedby="liabilities" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                        <button class="btn btn-primary btn-sm addliabilities" data-tr="VehicleLoans"
+                            data-columnName="Vehicle loans (principal balance) : " id="0"> + </button>
+                        <!-- <button class="btn btn-danger remove" id="minus"> - </button> -->
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr class="StudentLoans">
+                <td class="widthFirstColumn">Student loans (principal balance) :
+                    <input type="text" placeholder="Enter" class="form-control">
+                </td>
+                <td class="valueClass">
+                    <br>
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control liabilities"
+                            aria-describedby="liabilities" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                        <button class="btn btn-primary btn-sm addliabilities" data-tr="StudentLoans"
+                            data-columnName="Student loans (principal balance) :" id="0"> + </button>
+                        <!-- <button class="btn btn-danger remove" id="minus"> - </button> -->
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="OtherInstallment">
+                <td class="widthFirstColumn">Other installment loans (principal balance) :
+                    <input type="text" placeholder="Enter" class="form-control">
+                </td>
+                <td class="valueClass">
+                    <br>
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control liabilities"
+                            aria-describedby="liabilities" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                        <button class="btn btn-primary btn-sm addliabilities" data-tr="OtherInstallment"
+                            data-columnName="Other installment loans (principal balance) :" id="0"> +
+                        </button>
+                        <!-- <button class="btn btn-danger remove" id="minus"> - </button> -->
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="HomeEquityLoans">
+                <td class="widthFirstColumn">Home equity loans or lines of credit (principal balance):
+                    <input type="text" placeholder="Enter" class="form-control">
+                </td>
+                <td class="valueClass">
+                    <br>
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control liabilities"
+                            aria-describedby="liabilities" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                        <button class="btn btn-primary btn-sm addliabilities" data-tr="HomeEquityLoans"
+                            data-columnName="Home equity loans or lines of credit (principal balance) :" id="0"> +
+                        </button>
+                        <!-- <button class="btn btn-danger remove" id="minus"> - </button> -->
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr class="CashLoans">
+                <td class="widthFirstColumn">Cash loans owed to others (principal balance) :
+                    <input type="text" placeholder="Enter" class="form-control">
+                </td>
+                <td class="valueClass">
+                    <br>
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control liabilities"
+                            aria-describedby="liabilities" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                        <button class="btn btn-primary btn-sm addliabilities" data-tr="CashLoans"
+                            data-columnName="Cash loans owed to others (principal balance) :" id="0"> +
+                        </button>
+                        <!-- <button class="btn btn-danger remove" id="minus"> - </button> -->
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr class="Otherliabilities">
+                <td class="widthFirstColumn">Other liabilities :
+                    <input type="text" placeholder="Enter" class="form-control">
+                </td>
+                <td class="valueClass">
+                    <br>
+                    <div class="form-group">
+                        <span class="dollar">$</span> <input type="number" class="form-control liabilities"
+                            aria-describedby="liabilities" placeholder="0"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeypress="return isNumberKey(event)" maxlength="14">
+                        <button class="btn btn-primary btn-sm addliabilities" data-tr="Otherliabilities"
+                            data-columnName="Other liabilities" id="0"> + </button>
+                        <!-- <button class="btn btn-danger remove" id="minus"> - </button> -->
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- <div class="container-table"> -->
+    
+    <table class="table">
+        <caption><h1>Net Worth :</h1></caption>
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" class="widthFirstColumn">Category</th>
+                <th scope="col">Value</th>
+            </tr>
+        </thead>
+        <tbody class="tbody3">
+            <tr>
+                <td class="widthFirstColumn">My Total Assets</td>
+                <td><span class="dollar">$</span><strong id="totalAssets">0</strong></td>
+            </tr>
+            <tr>
+                <td>My Total Liabilities</td>
+                <td><span class="dollar">$</span><strong id="totalLiabilities">0</strong> </td>
+            </tr>
+            <tr>
+                <td>My Net Worth</td>
+                <td><span class="dollar">$</span><strong id="totalNetWorth">0</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script>
+        $(document).ready(function () {
+            console.log("doc ready");
+
+            let totalAssets = 0;
+            let totalLiabilities = 0;
+            $('#totalAssets').text(totalAssets);
+            // Asset Sum
+            let getTotalAssetsSum;
+            $(document).on('input', '.form-group .assets', getTotalAssetsSum = () => {
+                let assetsSum = 0;
+                $('.form-group .assets').each(function () {
+                    let inputVal = $(this).val();
+                    if ($.isNumeric(inputVal)) {
+                        // console.log(Math.floor(1.0789 * 100) / 100);                        
+                        var inputValFixed = Math.floor(inputVal * 100) / 100;
+                        assetsSum += parseFloat(inputValFixed)
+                    }
+                });
+                console.log(assetsSum)
+                totalAssets = assetsSum;
+                $('#totalAssets').text(assetsSum);
+            });
+
+            // Liability Sum
+            let getTotalLiabilitiesSum;
+            $(document).on('input', '.form-group .liabilities', getTotalLiabilitiesSum = () => {
+                let liabilitiesSum = 0;
+                $('.form-group .liabilities').each(function () {
+                    let inputVal = $(this).val();
+                    if ($.isNumeric(inputVal)) {
+                        let inputFixed = Math.floor(inputVal * 100) / 100;
+                        liabilitiesSum += parseFloat(inputFixed)
+                    }
+                });
+                totalLiabilities = liabilitiesSum;
+                $('#totalLiabilities').text(liabilitiesSum);
+            });
+
+            // Total Net worth
+            let getTotalNetworth
+            $(document).on('input', '.form-group', function () {
+                // Check input( $( this ).val() ) for validity here
+                getTotalNetworth = () => {                
+                    let totalNetWorth = totalAssets - totalLiabilities;
+                    $('#totalNetWorth').text(totalNetWorth);
+                }
+                getTotalNetworth();
+            });
+
+            // Add Assets
+            var idno = 1;
+            $(document).on('click', '.add', function (e) {
+                console.log('this.dataset.tr', this.dataset.tr)
+                e.preventDefault();
+                $('.' + this.dataset.tr).last().after('<tr class="' + this.dataset.tr + '">' +
+                    '<td>' + this.dataset.columnname + '<br>' + '<input type="text" placeholder="Enter" class="form-control">' + '</td>' +
+                    '<td class="valueClass">' +
+                    '<br>' +
+                    '<div class="form-group">' +
+                    '<span class="dollar">$</span><input type="number" class="form-control assets" id="asset1" aria-describedby="asset1" placeholder="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onkeypress="return isNumberKey(event)" maxlength="14">' +
+                    '<button class="btn btn-danger remove" id="minus"> - </button>' +
+                    '<button class="btn btn-primary add" data-tr="' + this.dataset.tr + '" data-columnname="' + this.dataset.columnname + '" id="' + idno + '"> + </button>' +
+                    '</div></td></tr>');
+                $(this).remove();
+                idno++;
+            });
+
+            // remove assets
+            $(document).on('click', '.remove', function (e) {
+                e.preventDefault();
+                let checkButton = this.nextSibling;
+                console.log('checkButton');  //if null then remove tr else append add button then remove
+                console.log('checkButton', checkButton);
+                if (checkButton == null) $(this).parent().parent().parent().remove();
+                else {
+                    let x = $(this).parent().parent().parent().prev()
+                    x.children().children().append('<button class="btn btn-primary add" data-tr="' + checkButton.dataset.tr + '" data-columnname="' + checkButton.dataset.columnname + '" id="' + idno + '"> + </button>');
+                    $(this).parent().parent().parent().remove();
+
+                }
+                getTotalAssetsSum();
+                getTotalNetworth();
+
+            });
+
+            var ino = 1;
+            $(document).on('click', '.addliabilities', function (e) {
+                console.log('this.dataset.tr', this.dataset.tr)
+                e.preventDefault();
+                $(this).remove();
+                $('.' + this.dataset.tr).last().after('<tr class="' + this.dataset.tr + '">' +
+                    '<td>' + this.dataset.columnname + '<br>' + '<input type="text" placeholder="Enter" class="form-control">' + '</td>' +
+                    '<td class="valueClass">' +
+                    '<br>' +
+                    '<div class="form-group">' +
+                    '<span class="dollar">$</span><input type="number" class="form-control liabilities" placeholder="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onkeypress="return isNumberKey(event)" maxlength="14">' +
+                    '<button class="btn btn-danger removeliabilities" id="minus"> - </button>' +
+                    '<button class="btn btn-primary addliabilities" data-tr="' + this.dataset.tr + '" data-columnname="' + this.dataset.columnname + '" id="' + ino + '"> + </button>' +
+                    '</div></td></tr>');
+                ino++;
+            });
+
+            $(document).on('click', '.removeliabilities', function (e) {
+                e.preventDefault();
+                let checkButton = this.nextSibling;
+                console.log('checkButton');  //if null then remove tr else append add button then remove
+                console.log('checkButton', checkButton);
+                if (checkButton == null) $(this).parent().parent().parent().remove();
+                else {
+                    let x = $(this).parent().parent().parent().prev()
+                    x.children().children().append('<button class="btn btn-primary addliabilities" data-tr="' + checkButton.dataset.tr + '" data-columnname="' + checkButton.dataset.columnname + '" id="' + idno + '"> + </button>');
+                    $(this).parent().parent().parent().remove();
+                    getTotalLiabilitiesSum();
+                    getTotalNetworth();
+                }
+                getTotalLiabilitiesSum();
+                getTotalNetworth();
+            });
+
+        });
+    </script>
+</body>
+
+</html>
